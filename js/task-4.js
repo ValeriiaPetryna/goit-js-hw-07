@@ -32,10 +32,6 @@ function handleSubmit(event) {
 
     console.log(`Email: ${email}, Password: ${password}`);
     
-//   form.reset();
+  form.reset();
 }
 
-document.addEventListener('submit', (element) => {
-    element.preventDefault();
-    element.target.reset();
-})

@@ -28,24 +28,11 @@ const images = [
   },
 ];
 
-const list = document.querySelector(".gallery");
-images.forEach(function(image) {
-  const listItem = document.createElement("li");
-  listItem.className = "list";
-  const imageItem = document.createElement("img");
-  imageItem.src = image.url;
-  imageItem.alt = image.alt;
-  imageItem.className = "photo";
-  listItem.appendChild(imageItem);
-  list.appendChild(listItem);
-});
-
-list.style.display = "flex";
-list.style.width = "360px";
-list.style.height = "300px";
-list.style.gap = "60px";
-// imageItem.style.display = "block";
-// imageItem.style.maxWidth = "100%";
-// imageItem.style.flexDirection = "row";
-// imageItem.style.justifyContent = "center";
-// imageItem.style.flexWrap = "wrap";
+const gallery = document.querySelector(".gallery");
+const markup = images
+  .flatMap(
+    (image) =>
+      `<li class="gallery-image"> <img class="image" src="${image.url}" alt="${image.alt}"></img> </li>`
+  )
+  .join("");
+gallery.insertAdjacentHTML("afterbegin", markup);

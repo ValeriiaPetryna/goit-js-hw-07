@@ -12,5 +12,41 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 
+.item>h2 {
+  font-size: 24px;
+  line-height: 1.33;
+  font-weight: 600;
+}
+
+.item>ul>li {
+  width: 360px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 8px 0 8px 18px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.gallery-image {
+  width: calc((100% - 48px) / 3);
+}
+
+.image {
+  width: 100%;
+}
 
